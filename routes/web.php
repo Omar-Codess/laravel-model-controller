@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Guest\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('movies.index');
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/movies/{movie}', [HomeController::class, 'show'])->name('movies.show');
